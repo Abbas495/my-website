@@ -1,30 +1,48 @@
 body {
+  width: 100%;
+  height: 100%;
+  margin: 20px;
+  padding: 1px;
   font-family: Arial, Helvetica, sans-serif;
-  margin: 0px;
-  padding: 10px;
-  /* background: rgb(199, 207, 207); */
-  background: rgb(255, 255, 255);
-  font-family: Arial, Helvetica, sans-serif, Helvetica neue;
-  margin: 0px;
-  padding: 0px;
 }
-header {
+/*Teilen*/
+.grid-box {
+  display: grid;
+  grid-template-columns: none;
+  grid-template-rows: none;
+  grid-template-areas:
+    "header  header header header header  "
+    "content content content content content"
+    "mid mid mid mid mid"
+    "side side side side side"
+    "footer footer footer footer footer";
+}
+/*Box1 Header*/
+.box-1 {
+  background: white;
+  grid-area: header;
   font-size: 18px;
-  margin-top: 10px;
-  padding: 35px;
-  padding-top: 20px;
+
   /* background-color: rgb(77, 75, 75); */
-  background-color: rgb(209, 205, 205);
-  padding-bottom: 60px;
   text-align: center;
-  /* background: black; */
 }
-header a {
-  text-decoration: none;
-  color: rgb(212, 165, 165);
-  font-size: 18px;
-  text-transform: uppercase;
+.search {
+  position: relative;
+  width: auto;
+  display: inline-block;
 }
+.search > input {
+  line-height: 24px;
+  height: 34px;
+  padding-left: 32px;
+  width: 400px;
+  margin-left: 20px;
+}
+
+.btn-secondary {
+  width: 150px;
+}
+
 nav ul {
   list-style-type: none;
   margin: 0px;
@@ -34,53 +52,219 @@ nav ul {
   align-items: center;
 }
 nav.lia li {
-  display: inline-block;
-  margin-inline-start: 6px;
-  margin: 2px;
+  display: flex;
+  margin-inline-start: 26px;
+  margin: 10px;
 }
 nav.lia li.spacer {
   flex-grow: 2;
 }
-ul {
-  float: left;
-  padding-bottom: 10px;
+.box-1 a {
+  text-decoration: none;
+  color: rgb(172, 142, 142);
+  font-size: 18px;
+  text-transform: uppercase;
 }
-nav.lia#icon {
-  float: right;
+/*Box2 Section*/
+.box-2 {
+  background: rgb(196, 236, 220);
+  grid-area: content;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  color: rgb(45, 136, 221);
 }
-.lia#icon2 {
-  float: left;
+
+ul.sell {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  width: 100%;
+  align-items: center;
 }
-.bot {
-  background: white;
-  color: gray;
-  padding: 20px;
+ul.sell li {
+  display: inline-block;
+  margin: 10px;
+  border: olive;
+  margin-inline-start: 26px;
+  border-bottom: red 2px solid;
+}
+#spec {
+  flex-grow: 2;
+  border-bottom: red 0px solid;
+}
+.product-layout {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+/* Ein idee von mir*/
+.foto1 {
+  margin-right: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 0%;
+  box-shadow: gray 0 0 10px;
+}
+.foto2 {
+  margin-right: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 0%;
+  box-shadow: gray 0 0 10px;
+}
+.foto3 {
+  margin-right: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 0%;
+  box-shadow: gray 0 0 10px;
+}
+.foto4 {
+  text-align: center;
+  margin-bottom: 10px;
+  border: 1px solid black;
+  border-radius: 0%;
+  box-shadow: gray 0 0 10px;
+}
+/*box3 Section*/
+
+.box-3 {
+  background: rgb(220, 240, 250);
+  color: rgb(89, 155, 106);
+  grid-area: footer;
+  padding: 10px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
-.product-layout {
-  display: block;
-}
-.product-layout figure {
-  margin: auto;
-  text-align: center;
-  text-transform: uppercase;
-  width: 200px;
-}
-.search {
-  position: relative;
-  width: auto;
+.box-3 ul.new-ar {
+  list-style-type: none;
+  margin: 0px;
   display: flex;
+  width: 100%;
+  align-items: center;
 }
-.search > input {
-  line-height: 24px;
-  height: 24px;
-  padding-left: 32px;
-  width: 300px;
+ul.new-ar li {
+  display: flex;
+  margin: 10px;
+  margin-inline-start: 26px;
+  border-bottom: red 2px solid;
 }
-.search > .search-icon {
-  position: absolute;
-  left: 6px;
-  top: 2px;
+ul.new-ar li.sppec {
+  flex-grow: 2;
+  border-bottom: red 0px solid;
 }
+/* ich mach die gleich auch hier*/
+.foto5 {
+  margin-right: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 0%;
+  box-shadow: gray 0 0 10px;
+}
+.foto6 {
+  margin-right: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 0%;
+  box-shadow: gray 0 0 10px;
+}
+.foto7 {
+  margin-right: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 0%;
+  box-shadow: gray 0 0 10px;
+}
+.foto8 {
+  text-align: center;
+  margin-bottom: 10px;
+  border: 1px solid black;
+  border-radius: 0%;
+  box-shadow: gray 0 0 10px;
+}
+/*Box5 Section */
+.box-5 {
+  background: rgba(129, 187, 163, 0.281);
+  grid-area: side;
+  padding: 10;
+}
+.section3 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+#topss {
+  text-align: center;
+  border-bottom: rgb(178, 207, 165) 4px solid;
+} /*bilder 3 die gleich idee wie vorher*/
+.foto9 {
+  margin-right: 70px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+.foto10 {
+  margin-right: 70px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+.foto11 {
+  margin-right: 70px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+.foto12 {
+  margin-right: 70px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+.foto13 {
+  margin-right: 70px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+.foto14 {
+  margin-right: 70px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+.foto15 {
+  margin-right: 70px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+.foto16 {
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+/*Box4 is footer*/
+.box-4 {
+  background: rgb(245, 247, 245);
+  grid-area: footer;
+}
+.box-4 ul.footer {
+  list-style-type: none;
+  margin: 0px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+.box-4 ul.footer li {
+  display: inline-block;
+  margin: 10px;
+  margin-inline-start: 28px;
+  text-align: center;
+}
+/* iza ma 7litaha ma 2nsa 2s2lo 3nha*/
+/* ich habe bis jetzt die Webseite mit css & html gebaut. es ist zwei sache die,die mit mir nicht gelöst die es bei section2+3.
+ich kann mit den nich die ganze seite nutzen*/
+/*ich habe auch frage wegen den Bilder. Wie kann ich sie auseinander schieben, ohne den Code zu wiederholen?*/
